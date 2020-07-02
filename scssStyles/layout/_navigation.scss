@@ -1,0 +1,101 @@
+.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    // position: relative;
+
+    .gray{
+        background-color: $color5;
+    }
+
+    &__home{
+        width: 90rem;
+        display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        background-color: #FFFFFF;
+        box-shadow: 0px 30px 30px #0000001A;
+        border-radius: 0px 0px 4px 4px;
+        text-align: left;
+        z-index: 20;
+        position: absolute;
+        // top: 5rem;
+        left: -5rem;
+        // transform: translate(-50%,0);
+        transition: all .3s;
+        
+        &-list{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0 1rem;
+            // padding: 1rem;
+        }
+
+        &-title{
+            color: #C1C8CE;
+            font-size: 1.3rem;
+        }
+
+        &-item{
+            padding:1rem 0;
+        }
+
+        &-link{
+            color: #262626;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+    }
+
+    &__list  &__home ul{
+        display: none;
+        border: none;
+    }
+
+    &__list li:hover > &__home {
+        border: 1px solid #F1F3F4;
+    }
+
+    &__list li:hover > &__home ul {
+        display: block;
+    }
+
+
+    &__buncer{
+        color: #FF4252;
+        text-transform: uppercase;
+        margin-top: 4rem;
+        font: bold;
+    }
+    &__list{
+        display: flex;
+        list-style: none;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        // position: relative;
+    }
+
+    &__link{
+        &:link,&:visited{
+            text-decoration: none;
+            color: #22262A;
+        }
+        
+        &:hover, &:active{
+            color: #33A0FF;
+        }
+    }
+
+    &__item{
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.35px;
+        color: #22262A;
+        margin: 1rem;
+        position: relative;
+    }
+}

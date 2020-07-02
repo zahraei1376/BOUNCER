@@ -1,0 +1,60 @@
+.row{
+    max-width: $grid-width;
+    // margin: 0 auto;
+    
+    &:not(:last-child){
+        margin-bottom: $space-vertical;
+
+        @include respond(tab-port){
+            margin-bottom: $space-vertical-small;
+        }
+    }
+
+    @include respond(tab-port){
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+    @include clearfix;
+
+    [class^="col-"]{
+        float: left;
+
+        &:not(:last-child){
+            margin-right:$space-horizonal;
+
+            @include respond(tab-port){
+                margin-right:0;
+                margin-bottom: $space-vertical-small;
+            }
+        }
+
+        @include respond(tab-port){
+            width: 100% !important;
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$space-horizonal}) / 2);
+    }
+
+    .col-1-of-3{
+        width: calc((100% - 2 * #{$space-horizonal}) / 3);
+    }
+
+    .col-2-of-3{
+        width: calc(2 * ((100% - 2 * #{$space-horizonal}) / 3) + #{$space-horizonal});
+    }
+
+    .col-1-of-4{
+        width: calc((100% - 3 * #{$space-horizonal}) / 4);
+    }
+
+    .col-2-of-4{
+        width: calc(2 * ((100% - 3 * #{$space-horizonal}) / 4) + #{$space-horizonal});
+    }
+
+    .col-3-of-4{
+        width: calc(3 * ((100% - 3 * #{$space-horizonal}) / 4) + 2 * #{$space-horizonal});
+    }
+}
